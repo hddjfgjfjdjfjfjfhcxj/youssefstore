@@ -3,138 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر يوسف - متجر الأناقة</title>
-    
+    <title>يوسف مصمم الغلابة | خدمات تصميم احترافية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;900&display=swap" rel="stylesheet">
-
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-            background-color: #0c0d0f;
-            color: #ffffff;
-            direction: rtl;
-        }
+        body { margin: 0; font-family: 'Cairo', sans-serif; background-color: #0c0d0f; color: #fff; }
+        
+        /* القائمة العلوية */
+        nav { background-color: #1a1c22; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #e50914; }
+        nav img { height: 60px; border-radius: 50%; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav ul li a { color: #fff; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        nav ul li a:hover { color: #e50914; }
 
-        header {
-            background-color: #1a1c22;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #282b33;
-        }
+        /* الهيدر */
+        header { text-align: center; padding: 50px 20px; }
+        h1 { font-size: 2.5rem; color: #e50914; }
 
-        h1 {
-            margin: 0;
-            color: #e50914;
-            font-size: 2.5rem;
-            font-weight: 900;
-        }
+        /* معرض الأعمال */
+        #portfolio { padding: 40px 20px; text-align: center; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .work-card { background: #1a1c22; padding: 20px; border: 2px solid #333; border-radius: 15px; transition: 0.3s; }
+        .work-card:hover { border-color: #e50914; transform: scale(1.05); }
 
-        #products-container {
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            min-height: 50vh;
-        }
-
-        .product-card {
-            background-color: #1a1c22;
-            border-radius: 12px;
-            overflow: hidden;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 300px;
-            background-color: #282b33;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-details {
-            padding: 20px;
-        }
-
-        .product-title {
-            margin: 0 0 10px;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .product-price {
-            font-size: 1.3rem;
-            color: #e50914;
-            font-weight: 900;
-            margin-bottom: 15px;
-        }
-
-        .buy-button {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #e50914;
-            color: #fff;
-            text-align: center;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-        .buy-button:hover {
-            background-color: #ff0f1e;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            border-top: 2px solid #282b33;
-            color: #555;
-            background-color: #1a1c22;
-        }
+        /* زرار الواتساب */
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; }
+        
+        footer { text-align: center; padding: 20px; background: #1a1c22; margin-top: 40px; }
     </style>
 </head>
 <body>
 
+    <nav>
+        <img src="logo.png" alt="شعار مصمم الغلابة">
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">الأعمال</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1>متجر يوسف</h1>
+        <h1>أهلاً بك في منصة مصمم الغلابة</h1>
+        <p>نصمم لك المستقبل بلمسة إبداعية</p>
     </header>
 
-    <div id="products-container">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="shirt.avif" alt="قميص بولو رجالي">
-            </div>
-            <div class="product-details">
-                <h3 class="product-title">قميص بولو رجالي صيفي عصري</h3>
-                <p class="product-price">569.70 ج.م.</p>
-                <button class="buy-button">إضافة للسلة</button>
-            </div>
+    <section id="portfolio">
+        <h2>معرض أعمالنا</h2>
+        <div class="grid-container">
+            <div class="work-card"><h3>تصميم 1</h3></div>
+            <div class="work-card"><h3>تصميم 2</h3></div>
+            <div class="work-card"><h3>تصميم 3</h3></div>
+            <div class="work-card"><h3>تصميم 4</h3></div>
         </div>
-    </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 متجر يوسف الحقيقي. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2026 جميع الحقوق محفوظة لمصمم الغلابة</p>
     </footer>
+
+    <a href="https://wa.me/201225355064" class="whatsapp-btn">تواصل معنا واتساب</a>
 
 </body>
 </html>
