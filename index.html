@@ -3,65 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>يوسف مصمم الغلابة | خدمات تصميم احترافية</title>
+    <title>منصة مصمم الغلابة | منصة العمل الحر الاحترافية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;900&display=swap" rel="stylesheet">
     <style>
         body { margin: 0; font-family: 'Cairo', sans-serif; background-color: #0c0d0f; color: #fff; }
         
-        /* القائمة العلوية */
-        nav { background-color: #1a1c22; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #e50914; }
-        nav img { height: 60px; border-radius: 50%; }
+        /* القائمة */
+        nav { background-color: #1a1c22; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #e50914; }
+        nav img { height: 50px; border-radius: 50%; }
         nav ul { list-style: none; display: flex; gap: 20px; }
-        nav ul li a { color: #fff; text-decoration: none; font-weight: 600; transition: 0.3s; }
-        nav ul li a:hover { color: #e50914; }
-
-        /* الهيدر */
-        header { text-align: center; padding: 50px 20px; }
-        h1 { font-size: 2.5rem; color: #e50914; }
-
+        nav ul li a { color: #fff; text-decoration: none; font-weight: 600; }
+        
+        /* الأقسام */
+        section { padding: 40px 20px; text-align: center; }
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+        .service-card { background: #1a1c22; padding: 20px; border-radius: 10px; border: 1px solid #333; }
+        
         /* معرض الأعمال */
-        #portfolio { padding: 40px 20px; text-align: center; }
         .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 20px; }
         .work-card { background: #1a1c22; padding: 15px; border: 2px solid #333; border-radius: 15px; transition: 0.3s; }
-        .work-card:hover { border-color: #e50914; transform: scale(1.03); }
         .work-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
 
-        /* زرار الواتساب */
-        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; }
-        
-        footer { text-align: center; padding: 20px; background: #1a1c22; margin-top: 40px; }
+        /* الأزرار */
+        .btn { background: #e50914; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; }
     </style>
 </head>
 <body>
 
     <nav>
-        <img src="logo.png" alt="شعار مصمم الغلابة">
+        <img src="logo.png" alt="Logo">
         <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">الأعمال</a></li>
-            <li><a href="#">تواصل معنا</a></li>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#portfolio">معرض الأعمال</a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>أهلاً بك في منصة مصمم الغلابة</h1>
-        <p>نصمم لك المستقبل بلمسة إبداعية</p>
+    <header id="home" style="padding: 60px 20px; text-align: center;">
+        <h1>منصة مصمم الغلابة</h1>
+        <p>أنجز مشاريعك بسهولة وأمان عبر منصة عمل حر احترافية</p>
+        <a href="https://wa.me/201225355064" class="btn">ابدأ مشروعك الآن</a>
     </header>
+
+    <section id="services">
+        <h2>أقسام الخدمات</h2>
+        <div class="grid-services">
+            <div class="service-card"><h3>تصميم</h3><p>هويات، شعارات، سوشيال ميديا</p></div>
+            <div class="service-card"><h3>برمجة</h3><p>واجهات مواقع، تطبيقات ويب</p></div>
+            <div class="service-card"><h3>تسويق</h3><p>تصميمات إعلانية احترافية</p></div>
+            <div class="service-card"><h3>ذكاء اصطناعي</h3><p>صور تخيلية وفن رقمي</p></div>
+        </div>
+    </section>
 
     <section id="portfolio">
         <h2>معرض أعمالنا</h2>
         <div class="grid-container">
-            <div class="work-card"><img src="كشري ابو حمزة-رقم رقم 1 في ابنوب.jpg" alt="تصميم 1"><h3>كشري أبو حمزة (رقم 1)</h3></div>
-            <div class="work-card"><img src="كشري ابو حمزة-طعم فاجر يظبط الدماغ.jpg" alt="تصميم 2"><h3>كشري أبو حمزة (طعم فاجر)</h3></div>
-            <div class="work-card"><img src="كشري وطواجن-ابو حمزة.jpg" alt="تصميم 3"><h3>كشري وطواجن أبو حمزة</h3></div>
-            <div class="work-card"><img src="مطعم الزعيم-مشويات كشري حواوشي بيتزا طواجن.jpg" alt="تصميم 4"><h3>مطعم الزعيم</h3></div>
-            <div class="work-card"><img src="قائمة اسعار كشري ابو حمزة.jpg" alt="تصميم 5"><h3>قائمة أسعار أبو حمزة</h3></div>
+            <div class="work-card"><img src="كشري ابو حمزة-رقم رقم 1 في ابنوب.jpg" alt="1"><h3>كشري أبو حمزة (رقم 1)</h3></div>
+            <div class="work-card"><img src="كشري ابو حمزة-طعم فاجر يظبط الدماغ.jpg" alt="2"><h3>كشري أبو حمزة (فاجر)</h3></div>
+            <div class="work-card"><img src="كشري وطواجن-ابو حمزة.jpg" alt="3"><h3>كشري وطواجن أبو حمزة</h3></div>
+            <div class="work-card"><img src="مطعم الزعيم-مشويات كشري حواوشي بيتزا طواجن.jpg" alt="4"><h3>مطعم الزعيم</h3></div>
+            <div class="work-card"><img src="قائمة اسعار كشري ابو حمزة.jpg" alt="5"><h3>قائمة أسعار أبو حمزة</h3></div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة لمصمم الغلابة</p>
-    </footer>
 
     <a href="https://wa.me/201225355064" class="whatsapp-btn">تواصل معنا واتساب</a>
 
