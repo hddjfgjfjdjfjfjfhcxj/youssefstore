@@ -21,9 +21,10 @@
 
         /* معرض الأعمال */
         #portfolio { padding: 40px 20px; text-align: center; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .work-card { background: #1a1c22; padding: 20px; border: 2px solid #333; border-radius: 15px; transition: 0.3s; }
-        .work-card:hover { border-color: #e50914; transform: scale(1.05); }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 20px; }
+        .work-card { background: #1a1c22; padding: 15px; border: 2px solid #333; border-radius: 15px; transition: 0.3s; }
+        .work-card:hover { border-color: #e50914; transform: scale(1.03); }
+        .work-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
 
         /* زرار الواتساب */
         .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; }
@@ -50,10 +51,11 @@
     <section id="portfolio">
         <h2>معرض أعمالنا</h2>
         <div class="grid-container">
-            <div class="work-card"><h3>تصميم 1</h3></div>
-            <div class="work-card"><h3>تصميم 2</h3></div>
-            <div class="work-card"><h3>تصميم 3</h3></div>
-            <div class="work-card"><h3>تصميم 4</h3></div>
+            <div class="work-card"><img src="كشري ابو حمزة-رقم رقم 1 في ابنوب.jpg" alt="تصميم 1"><h3>كشري أبو حمزة (رقم 1)</h3></div>
+            <div class="work-card"><img src="كشري ابو حمزة-طعم فاجر يظبط الدماغ.jpg" alt="تصميم 2"><h3>كشري أبو حمزة (طعم فاجر)</h3></div>
+            <div class="work-card"><img src="كشري وطواجن-ابو حمزة.jpg" alt="تصميم 3"><h3>كشري وطواجن أبو حمزة</h3></div>
+            <div class="work-card"><img src="مطعم الزعيم-مشويات كشري حواوشي بيتزا طواجن.jpg" alt="تصميم 4"><h3>مطعم الزعيم</h3></div>
+            <div class="work-card"><img src="قائمة اسعار كشري ابو حمزة.jpg" alt="تصميم 5"><h3>قائمة أسعار أبو حمزة</h3></div>
         </div>
     </section>
 
